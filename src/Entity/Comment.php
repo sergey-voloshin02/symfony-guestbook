@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CommentRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JetBrains\PhpStorm\Pure;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
 class Comment
@@ -34,7 +35,7 @@ class Comment
 
     public function __toString(): string
     {
-        return (string)$this->getEmail();
+        return (string) $this->getEmail();
     }
 
     public function getId(): ?int
